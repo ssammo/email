@@ -48,7 +48,7 @@ echo "public.pyzor.org:24441" > /etc/spamassassin/pyzor/servers
 # * Disable localmode so Pyzor, DKIM and DNS checks can be used.
 tools/editconf.py /etc/default/spampd \
 	DESTPORT=10026 \
-	ADDOPTS="\"--maxsize=2000\"" \
+	ADDOPTS="\"--maxsize=0\"" \
 	LOCALONLY=0
 
 # Spamassassin normally wraps spam as an attachment inside a fresh
